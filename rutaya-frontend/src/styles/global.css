@@ -137,7 +137,7 @@ background: linear-gradient(
   rgba(0, 0, 0, 0.45),
   rgba(28, 107, 79, 0.85)
 ),
-    url("/src/assets/images/hero.jpg");
+    url("/images/hero.jpg");
   background-size: cover;
   background-position: center 30%;
   color: white;
@@ -827,7 +827,7 @@ background:
     rgba(255,255,255,0.94)
   ),
 
-  url("/src/assets/images/admin-home.jpg");
+  url("/images/admin-home.jpg");
 
   backdrop-filter: blur(16px);
 
@@ -1075,7 +1075,7 @@ background:
       rgba(28,107,79,0.80)
     ),
 
-    url("/src/assets/images/hero.jpg");
+    url("/images/hero.jpg");
 
   background-size: cover;
 
@@ -1236,7 +1236,7 @@ background:
       rgba(28,107,79,0.45)
     ),
 
-    url("/src/assets/images/ayacucho-admin.jpg");
+    url("/images/ayacucho-admin.jpg");
 
   background-size: cover;
 
@@ -1463,7 +1463,7 @@ background:
       rgba(18,55,42,0.75)
     ),
 
-    url("/src/assets/images/ayacucho-admin.jpg");
+    url("/images/ayacucho-admin.jpg");
 
   background-size: cover;
 
