@@ -10,11 +10,17 @@ public class WebConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
+
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedMethods("*");
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "https://brave-balance-production-35cb.up.railway.app"
+                        )
+                        .allowedMethods("*")
+                        .allowedHeaders("*");
             }
         };
     }
