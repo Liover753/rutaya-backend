@@ -166,7 +166,7 @@ function LugarCard({ lugar }) {
       {/* ===================================== */}
 
       <img
-        src={`/images/${lugar.imagen}`}
+        src={lugar.imagen}
         className="card-img-top lugar-img"
         alt={lugar.nombre}
       />
