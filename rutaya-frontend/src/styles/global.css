@@ -1,0 +1,1666 @@
+/* =========================
+   🌈 GLOBAL
+========================= */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1f2937;
+  background: linear-gradient(135deg, #f5f7fa, #e4efe9);
+  min-height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ========================================
+   🌌 NAVBAR PREMIUM
+======================================== */
+
+.rutaya-navbar {
+
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  background: rgba(26, 52, 43, 0.92);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+
+  transition: all 0.3s ease;
+
+  padding: 12px 0;
+}
+
+
+/* LOGO */
+.navbar-brand {
+
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+
+  color: white !important;
+
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+
+  transform: scale(1.03);
+
+  color: #d7f3e3 !important;
+}
+
+
+/* LINKS */
+.nav-link {
+
+  color: rgba(255,255,255,0.88) !important;
+
+  font-weight: 500;
+
+  position: relative;
+
+  transition: all 0.25s ease;
+}
+
+
+/* HOVER */
+.nav-link:hover {
+
+  color: white !important;
+
+  transform: translateY(-1px);
+}
+
+
+/* EFECTO LÍNEA */
+.nav-link::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0%;
+  height: 2px;
+
+  background: #d7f3e3;
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+
+  width: 100%;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .rutaya-navbar {
+
+    padding: 12px 0;
+  }
+
+  .navbar-collapse {
+
+    margin-top: 15px;
+
+    background: rgba(18,55,42,0.92);
+
+    border-radius: 18px;
+
+    padding: 18px;
+  }
+
+  .nav-link {
+
+    padding: 12px 0;
+
+    text-align: center;
+  }
+
+}
+
+/* =========================
+   🌄 HERO
+========================= */
+.hero-section {
+background: linear-gradient(
+  rgba(0, 0, 0, 0.45),
+  rgba(28, 107, 79, 0.85)
+),
+    url("/src/assets/images/hero.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  color: white;
+  padding: 150px 0;
+  text-align: center;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section {
+  height: 75vh; /* altura controlada */
+}
+
+.hero-title {
+
+  font-size: 4rem;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+
+  font-size: 1.1rem;
+
+  opacity: 0.92;
+
+  max-width: 700px;
+
+  margin: auto;
+}
+
+/* =========================
+   🧾 SECCIONES
+========================= */
+.section-header h2 {
+  font-size: 34px;
+}
+
+/* =========================
+   🔎 INPUTS
+========================= */
+.form-control,
+.form-select {
+  border-radius: 16px;
+  border: 1px solid #d6dde5;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #436850;
+  box-shadow: 0 0 0 0.2rem rgba(67, 104, 80, 0.18);
+}
+
+/* =========================
+   🔘 BOTONES
+========================= */
+.btn-rutaya {
+  background: #1c6b4f;
+  color: white;
+  border-radius: 999px;
+  padding: 12px 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.btn-rutaya:hover {
+  background: #145c41;
+  transform: scale(1.05);
+}
+
+/* BOTÓN HERO */
+
+.btn-explorar {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 600;
+
+  padding: 5px 15px;
+
+  border-radius: 10px;
+}
+
+.arrow {
+
+  display: none;
+}
+
+
+/* =========================
+   🧱 CARDS
+========================= */
+.lugar-card {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.lugar-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.lugar-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  filter: brightness(0.9);
+  transition: transform 0.3s ease;
+}
+
+.lugar-card:hover .lugar-img {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* Badge flotante */
+.lugar-card .badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+/* =========================
+   📄 DETALLE
+========================= */
+.detalle-card {
+  background: white;
+  padding: 40px;
+  border-radius: 28px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.detalle-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   🧭 TIMELINE
+========================= */
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 4px;
+  height: 100%;
+  background: #1c6b4f;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.timeline-number {
+  width: 35px;
+  height: 35px;
+  background: #1c6b4f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.timeline-content {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-4px);
+}
+
+.timeline-img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+/* =========================
+   ✨ ANIMACIONES
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* ========================================
+   📱 RESPONSIVE MOBILE PRO
+======================================== */
+
+/* TABLETS */
+@media (max-width: 992px) {
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 20px;
+  }
+
+/* OVERLAY PREMIUM */
+.hero-section::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255,255,255,0.08),
+      transparent 55%
+    );
+
+  z-index: 1;
+}
+
+
+/* CONTENIDO */
+.hero-section .container {
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* TÍTULO */
+.hero-title {
+
+  font-size: 6rem;
+
+  font-weight: 800;
+
+  letter-spacing: 6px;
+
+  color: white;
+
+  text-shadow:
+    0 10px 35px rgba(0,0,0,0.45);
+
+  animation:
+    fadeHero 1.2s ease;
+}
+
+
+/* SUBTITLE */
+.hero-subtitle {
+
+  max-width: 760px;
+
+  margin: 25px auto;
+
+  font-size: 1.35rem;
+
+  color: rgba(255,255,255,0.92);
+
+  line-height: 1.8;
+
+  animation:
+    fadeHero 1.5s ease;
+}
+
+
+/* BOTÓN */
+.btn-explorar {
+
+  border-radius: 50px;
+
+  padding: 14px 34px;
+
+  font-weight: 600;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+  animation:
+    fadeHero 1.8s ease;
+}
+
+.btn-explorar:hover {
+
+  transform:
+    translateY(-4px)
+    scale(1.03);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.32);
+}
+
+
+/* ANIMACIÓN */
+@keyframes fadeHero {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+}
+
+
+  .detalle-img {
+    height: 350px;
+  }
+
+  .timeline-img {
+    width: 100%;
+    height: 220px;
+  }
+
+}
+
+
+/* CELULARES */
+@media (max-width: 768px) {
+
+  /* HERO */
+  .hero-section {
+    padding: 90px 20px;
+    min-height: auto;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .btn-explorar {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* NAVBAR */
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .navbar-nav {
+    margin-top: 15px;
+    gap: 10px;
+  }
+
+  .nav-link {
+    text-align: center;
+  }
+
+  /* CARDS */
+  .lugar-card {
+    border-radius: 20px;
+  }
+
+  .lugar-img {
+    height: 220px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  /* DETALLE */
+  .detalle-card {
+    padding: 24px;
+  }
+
+  .detalle-img {
+    height: 250px;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding-left: 10px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+  }
+
+  .timeline-number {
+    margin-bottom: 15px;
+  }
+
+  .timeline-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-img {
+    width: 100%;
+    height: 220px;
+  }
+
+  /* FORMULARIOS */
+  input,
+  textarea,
+  select,
+  .form-control {
+    font-size: 16px !important;
+  }
+
+  /* BOTONES */
+  .btn-rutaya,
+  .btn-danger {
+    width: 100%;
+  }
+
+}
+
+
+/* CELULARES PEQUEÑOS */
+@media (max-width: 480px) {
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .detalle-img {
+    height: 220px;
+  }
+
+  .lugar-img {
+    height: 200px;
+  }
+
+}
+
+
+/* ========================================
+   ✨ REVEAL ON SCROLL
+======================================== */
+
+.reveal {
+
+  opacity: 0;
+
+  transform: translateY(60px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.reveal.active {
+
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* ========================================
+   ✨ FLOATING CARDS
+======================================== */
+
+.lugar-card,
+.ruta-card,
+.detalle-card {
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.lugar-card:hover,
+.ruta-card:hover,
+.detalle-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow:
+    0 20px 45px rgba(0,0,0,0.15);
+}
+
+
+/* ========================================
+   ✨ BOTONES PREMIUM
+======================================== */
+
+.btn-rutaya {
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.btn-rutaya::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      120deg,
+      transparent,
+      rgba(255,255,255,0.25),
+      transparent
+    );
+
+  transition: all 0.5s ease;
+}
+
+.btn-rutaya:hover::before {
+
+  left: 100%;
+}
+
+
+/* ========================================
+   ✨ SMOOTH SCROLL
+======================================== */
+
+html {
+
+  scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   ✨ PREMIUM LOADER
+======================================== */
+
+.loader-container {
+
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 20px;
+}
+
+
+/* CÍRCULO */
+.loader-circle {
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  border:
+    6px solid rgba(28,107,79,0.15);
+
+  border-top:
+    6px solid #1c6b4f;
+
+  animation:
+    spin 1s linear infinite;
+}
+
+
+/* TÍTULO */
+.loader-text {
+
+  font-size: 2rem;
+
+  letter-spacing: 3px;
+
+  color: #1c6b4f;
+
+  font-weight: 700;
+}
+
+
+/* SUBTEXT */
+.loader-subtext {
+
+  color: #6c757d;
+
+  font-size: 1rem;
+}
+
+
+/* ANIMACIÓN */
+@keyframes spin {
+
+  to {
+
+    transform: rotate(360deg);
+
+  }
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-section {
+
+  margin-top: 55px;
+
+  margin-bottom: 10px;
+}
+
+.stats-wrapper {
+
+background:
+
+  linear-gradient(
+    rgba(255,255,255,0.89),
+    rgba(255,255,255,0.94)
+  ),
+
+  url("/src/assets/images/admin-home.jpg");
+
+  backdrop-filter: blur(16px);
+
+  border:
+    1px solid rgba(255,255,255,0.35);
+
+  border-radius: 24px;
+
+  padding: 35px 20px;
+
+  box-shadow:
+    0 12px 34px rgba(0,0,0,0.06);
+}
+
+.stat-card {
+
+  background: transparent;
+  border: none;
+  text-align: center;
+}
+
+.stat-card h3 {
+
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #166534;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-card p {
+
+  font-size: 0.92rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #5b6862;
+  margin: 0;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .stat-card h2 {
+
+    font-size: 2.3rem;
+  }
+
+}
+
+/* ========================================
+   🌌 FOOTER PREMIUM
+======================================== */
+
+.rutaya-footer {
+
+  background:
+    linear-gradient(
+      180deg,
+      #12372a,
+      #0b2219
+    );
+
+  color: white;
+
+  padding:
+    90px 20px 50px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.05);
+}
+
+
+/* LOGO */
+.footer-logo {
+
+  font-size: 2rem;
+
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 20px;
+}
+
+
+/* TEXT */
+.footer-text {
+
+  color:
+    rgba(255,255,255,0.75);
+
+  line-height: 1.8;
+}
+
+
+/* TITLES */
+.footer-title {
+
+  margin-bottom: 20px;
+
+  font-weight: 700;
+}
+
+
+/* LINKS */
+.footer-links {
+
+  list-style: none;
+
+  padding: 0;
+}
+
+.footer-links li {
+
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+
+  color:
+    rgba(255,255,255,0.78);
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+
+  color: white;
+
+  padding-left: 5px;
+}
+
+
+/* BOTTOM */
+.footer-bottom {
+
+  margin-top: 50px;
+
+  padding-top: 25px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.1);
+
+  text-align: center;
+}
+
+.footer-bottom p {
+
+  margin: 0;
+
+  color:
+    rgba(255,255,255,0.6);
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .rutaya-footer {
+
+    text-align: center;
+  }
+
+  .footer-links {
+
+    margin-top: 20px;
+  }
+
+}
+
+
+/* =========================
+   RUTAS INTELIGENTES
+========================= */
+
+.ruta-card {
+
+  border: none;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+}
+
+.ruta-card:hover {
+
+  transform: translateY(-8px);
+}
+
+.ruta-img {
+
+  width: 100%;
+
+  height: 240px;
+
+  object-fit: cover;
+}
+
+.ruta-card .card-body {
+
+  padding: 24px;
+}
+
+.ruta-card h4 {
+
+  margin-bottom: 14px;
+
+  line-height: 1.4;
+}
+
+.ruta-card .btn-rutaya {
+
+  margin-top: 10px;
+}
+
+/* ========================================
+   LOGIN ADMIN RUTAYA
+======================================== */
+
+.admin-login-page {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(28,107,79,0.80)
+    ),
+
+    url("/src/assets/images/hero.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+}
+
+.admin-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  backdrop-filter: blur(4px);
+}
+
+.admin-login-card {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 420px;
+
+  padding: 45px;
+
+  border-radius: 28px;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(14px);
+
+  border:
+    1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.25);
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+.admin-logo {
+
+  color: white;
+
+  font-size: 3rem;
+
+  font-weight: 900;
+
+  text-align: center;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 5px;
+}
+
+.admin-title {
+
+  color: white;
+
+  text-align: center;
+
+  font-weight: 700;
+
+  margin: 0;
+}
+
+.admin-subtitle {
+
+  color: rgba(255,255,255,0.85);
+
+  text-align: center;
+
+  font-size: 15px;
+
+  margin-bottom: 10px;
+}
+
+.admin-login-card input {
+
+  height: 56px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  padding: 0 18px;
+
+  background: rgba(255,255,255,0.92);
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.admin-login-card button {
+
+  height: 56px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: white;
+
+  color: #145c45;
+
+  font-weight: 700;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.admin-login-card button:hover {
+
+  transform: translateY(-2px);
+
+  background: #f5f5f5;
+}
+
+.login-error {
+
+  color: #ffd7d7;
+
+  text-align: center;
+
+  margin-top: 5px;
+
+  font-size: 14px;
+}
+
+/* ========================================
+   HERO ADMIN
+======================================== */
+
+.admin-hero {
+
+  height: 75vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(28,107,79,0.45)
+    ),
+
+    url("/src/assets/images/ayacucho-admin.jpg");
+
+  background-size: cover;
+
+  background-position: center center;
+}
+
+.admin-hero .hero-title {
+
+  color: white;
+
+  font-size: 4rem;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 4px 20px rgba(0,0,0,0.35);
+}
+
+.admin-hero .hero-subtitle {
+
+  color: rgba(255,255,255,0.92);
+
+  font-size: 1.2rem;
+
+  text-shadow:
+    0 2px 10px rgba(0,0,0,0.30);
+}
+
+.admin-card-img {
+  height: 230px;
+  object-fit: cover;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+
+  border-radius: 16px;
+
+  padding: 14px;
+
+  border: 1px solid #d9dee3;
+
+  transition: 0.3s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus,
+.admin-form select:focus {
+
+  border-color: #1c6b4f;
+
+  box-shadow: 0 0 0 4px rgba(28,107,79,0.12);
+}
+
+.admin-form textarea {
+
+  min-height: 160px;
+
+  resize: none;
+}
+
+.admin-form select {
+
+  height: 58px;
+}
+
+/* ========================================
+   BUSCADOR ADMIN
+======================================== */
+
+.buscador-admin {
+
+  height: 58px;
+
+  border-radius: 18px;
+
+  border: 1px solid #dce3df;
+
+  padding: 0 20px;
+
+  font-size: 16px;
+
+  background: white;
+
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.04);
+}
+
+.buscador-admin:focus {
+
+  border-color: #1c6b4f;
+
+  box-shadow:
+    0 0 0 4px rgba(28,107,79,0.12);
+}
+
+/* ========================================
+   SELECTOR LUGARES RUTA
+======================================== */
+
+.lugar-select {
+
+  width: 170px;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  border: 3px solid transparent;
+
+  background: white;
+
+  transition: 0.3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.08);
+}
+
+.lugar-select:hover {
+
+  transform: translateY(-6px);
+}
+
+.lugar-select.active {
+
+  border-color: #1c6b4f;
+
+  transform: scale(1.03);
+}
+
+.lugar-select img {
+
+  width: 100%;
+
+  height: 120px;
+
+  object-fit: cover;
+}
+
+.lugar-select span {
+
+  display: block;
+
+  padding: 12px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   BOTÓN VOLVER
+======================================== */
+
+.volver-wrapper {
+
+  margin-bottom: 25px;
+}
+
+.btn-volver {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 12px 20px;
+
+  border-radius: 16px;
+
+  background:
+    rgba(255,255,255,0.75);
+
+  backdrop-filter: blur(12px);
+
+  color: #1c2b36;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.06);
+}
+
+.btn-volver:hover {
+
+  transform: translateY(-2px);
+
+  background: #1c6b4f;
+
+  color: white;
+
+  box-shadow:
+    0 10px 26px rgba(28,107,79,0.22);
+}
+
+/* ========================================
+   DASHBOARD ADMIN
+======================================== */
+
+.admin-dashboard {
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.45),
+      rgba(18,55,42,0.75)
+    ),
+
+    url("/src/assets/images/ayacucho-admin.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+}
+
+.dashboard-overlay {
+
+  position: absolute;
+
+  inset: 0;
+
+  backdrop-filter: blur(4px);
+}
+
+.dashboard-content {
+
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+
+  color: white;
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  padding: 40px;
+}
+
+.dashboard-title {
+
+  font-size: 52px;
+
+  font-weight: 800;
+
+  margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+
+  font-size: 18px;
+
+  opacity: 0.9;
+
+  margin-bottom: 50px;
+}
+
+.dashboard-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+}
+
+.dashboard-card {
+
+  background:
+    rgba(255,255,255,0.12);
+
+  border:
+    1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(14px);
+
+  border-radius: 28px;
+
+  padding: 40px;
+
+  text-decoration: none;
+
+  color: white;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.15);
+}
+
+.dashboard-card:hover {
+
+  transform: translateY(-6px);
+
+  background:
+    rgba(255,255,255,0.18);
+}
+
+.dashboard-card h3 {
+
+  font-size: 28px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.dashboard-card p {
+
+  opacity: 0.9;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   🔥 BOTONES ADMIN
+========================= */
+
+.btn-admin-edit {
+
+  border: none !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1c6b4f,
+      #14532d
+    ) !important;
+
+  color: white !important;
+
+  padding: 10px 18px !important;
+
+  border-radius: 14px !important;
+
+  font-weight: 600 !important;
+
+  font-size: 14px !important;
+
+  transition: all 0.25s ease !important;
+
+  box-shadow:
+    0 6px 16px rgba(20,83,45,0.16) !important;
+}
+
+.btn-admin-edit:hover {
+
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #14532d,
+      #0f3d22
+    ) !important;
+}
+
+
+/* DELETE */
+
+.btn-admin-delete {
+
+  border: none !important;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4444,
+      #dc2626
+    ) !important;
+
+  color: white !important;
+
+  padding: 10px 18px !important;
+
+  border-radius: 14px !important;
+
+  font-weight: 600 !important;
+
+  font-size: 14px !important;
+
+  transition: all 0.25s ease !important;
+
+  box-shadow:
+    0 6px 16px rgba(220,38,38,0.16) !important;
+}
+
+.btn-admin-delete:hover {
+
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      #dc2626,
+      #b91c1c
+    ) !important;
+}

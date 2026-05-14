@@ -1,0 +1,580 @@
+/* =========================
+   🧱 TARJETAS DE LUGARES
+========================= */
+
+.lugar-card {
+
+  position: relative;
+
+  border: 1px solid transparent;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 24px rgba(18, 55, 42, 0.08);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border 0.25s ease;
+}
+
+
+/* HOVER SUAVE PREMIUM */
+.lugar-card:hover {
+
+  transform:
+    translateY(-5px) !important;
+
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.08) !important;
+
+  border:
+    1px solid rgba(255,255,255,0.45);
+}
+
+
+/* BODY */
+.lugar-card .card-body {
+
+  padding: 24px;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================
+   🖼 IMAGEN
+========================= */
+
+.lugar-img {
+
+  width: 100%;
+
+  height: 220px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease;
+
+  filter: brightness(0.96);
+}
+
+
+/* HOVER IMAGEN */
+.lugar-card:hover .lugar-img {
+
+  transform: scale(1.03);
+
+  filter: brightness(1);
+}
+
+
+/* =========================
+   🏷 BADGE
+========================= */
+
+.lugar-card .badge {
+
+  position: absolute;
+
+  top: 10px;
+
+  left: 10px;
+}
+
+/* =========================
+   🧭 TARJETAS DE RUTAS
+========================= */
+.ruta-card {
+  border: none;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(18, 55, 42, 0.10);
+  transition: all 0.25s ease;
+}
+
+.ruta-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(18, 55, 42, 0.18);
+}
+
+/* =========================
+   📄 DETALLE DEL LUGAR
+========================= */
+.detalle-card {
+
+  background: white;
+
+  padding: 38px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 12px 36px rgba(18, 55, 42, 0.12);
+}
+
+/* ========================================
+   PANEL ADMIN PREMIUM
+======================================== */
+
+.admin-panel-card {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 32px;
+
+  padding: 40px;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.89),
+      rgba(255,255,255,0.94)
+    ),
+
+    url("/src/assets/images/admin.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 12px 38px rgba(0,0,0,0.10);
+}
+
+/* ========================================
+   COMENTARIOS
+======================================== */
+
+.comentario-card {
+
+  background: #f8faf9;
+
+  border: 1px solid #e5ece8;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+  transition: all 0.3s ease;
+}
+
+.comentario-card:hover {
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,0.06);
+}
+
+.comentario-header {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 14px;
+}
+
+.comentario-avatar {
+
+  width: 48px;
+
+  height: 48px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1c6b4f,
+      #12372a
+    );
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: 700;
+
+  font-size: 18px;
+
+  flex-shrink: 0;
+}
+
+.comentario-fecha {
+
+  font-size: 14px;
+
+  color: #7b8a83;
+}
+
+.comentario-texto {
+
+  color: #2c3a35;
+
+  line-height: 1.7;
+
+  margin: 0;
+}
+
+/* Imagen detalle */
+.detalle-img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px; /* 🔥 MÁS GRANDE */
+  height: 480px;     /* 🔥 ALTURA PRO */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 20px;
+  object-fit: contain;
+  background: #f8f9fa;
+  padding: 10px;
+} 
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.rutaya-badge {
+
+  background: #d7f3e3;
+
+  color: #1c6b4f;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  margin-bottom: 14px;
+
+  display: inline-block;
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.badge-cultura {
+
+  background: #e3f2fd;
+
+  color: #1565c0;
+}
+
+.badge-restaurantes {
+
+  background: #fff3e0;
+
+  color: #ef6c00;
+}
+
+.badge-naturaleza {
+
+  background: #e8f5e9;
+
+  color: #2e7d32;
+}
+
+.badge-hoteles {
+
+  background: #f3e5f5;
+
+  color: #7b1fa2;
+}
+
+.badge-movilidades {
+
+  background: #eceff1;
+
+  color: #455a64;
+}
+
+/* =========================
+   🔘 BOTÓN
+========================= */
+.btn-rutaya {
+  background: #1c6b4f;
+  color: white;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.btn-rutaya:hover {
+  background: #14533c;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   🧭 TIMELINE RUTA
+========================= */
+.timeline {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 15px;
+  width: 4px;
+  height: 100%;
+  background: #1c6b4f;
+  border-radius: 10px;
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.timeline-number {
+  width: 35px;
+  height: 35px;
+  background: #1c6b4f;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+/* Card interna */
+.timeline-content {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Imagen */
+.timeline-img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content:hover .timeline-img {
+  transform: scale(1.05);
+}
+
+.timeline-text {
+  flex: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-img {
+    width: 100%;
+    max-width: 420px;
+    height: 200px;
+  }
+}
+
+/* =========================
+   ✨ ANIMACIONES
+========================= */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* ========================================
+   ✨ GLOW EFFECT
+======================================== */
+
+.lugar-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.12),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+
+  z-index: 1;
+}
+
+.lugar-card:hover::before {
+
+  opacity: 1;
+}
+
+/* ========================================
+   ❤️ FAVORITOS
+======================================== */
+
+.favorito-btn {
+
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  width: 46px;
+  height: 46px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,0.92);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 1.3rem;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.12);
+}
+
+
+/* HOVER */
+.favorito-btn:hover {
+
+  transform:
+    scale(1.12);
+
+  background: white;
+}
+
+
+/* ACTIVO */
+.favorito-btn.activo {
+
+  background:
+    rgba(255,240,240,0.95);
+
+  animation:
+    pulseFav 0.35s ease;
+}
+
+
+/* ANIMACIÓN */
+@keyframes pulseFav {
+
+  0% {
+
+    transform: scale(0.8);
+  }
+
+  100% {
+
+    transform: scale(1);
+  }
+}
+
+/* ========================================
+   ⭐ RATING
+======================================== */
+
+.rating-stars {
+
+  display: flex;
+
+  gap: 6px;
+}
+
+
+/* STAR */
+.star {
+
+  font-size: 1.5rem;
+
+  cursor: pointer;
+
+  color: #d6d6d6;
+
+  transition: all 0.25s ease;
+}
+
+
+/* HOVER */
+.star:hover {
+
+  transform: scale(1.15);
+}
+
+
+/* ACTIVE */
+.star.active {
+
+  color: #ffc107;
+
+  text-shadow:
+    0 0 10px rgba(255,193,7,0.45);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
