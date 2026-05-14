@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/rutas";
+const API = "https://rutaya-backend-production.up.railway.app/rutas";
 
 
 // ========================================

@@ -1,4 +1,4 @@
-const API = "http://localhost:8080/lugares";
+const API = "https://rutaya-backend-production.up.railway.app/lugares";
 
 
 // ===============================

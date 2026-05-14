@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:8080/auth";
+const API_URL = "https://rutaya-backend-production.up.railway.app/auth";
 
 // ✅ Login admin
 export async function loginAdmin(datos) {
