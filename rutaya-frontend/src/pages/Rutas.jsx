@@ -35,7 +35,7 @@ useEffect(() => {
 
                   {/* IMAGEN */}
                   <img
-                    src={`/src/assets/images/${ruta.imagen}`}
+                    src={ruta.imagen}
                     className="ruta-img"
                     alt={ruta.nombre}
                   />

@@ -107,7 +107,7 @@ const handleSubmit = async (e) => {
   const rutaCreada = await crearRuta(nuevaRuta);
 
   for (let i = 0; i < lugaresSeleccionados.length; i++) {
-    await fetch("http://localhost:8080/ruta-detalles", {
+    await fetch("https://rutaya-backend-production.up.railway.app/ruta-detalles", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -331,7 +331,7 @@ const rutasFiltradas = rutas.filter((ruta) =>
       >
 
         <img
-          src={`/src/assets/images/${lugar.imagen}`}
+          src={lugar.imagen}
           alt={lugar.nombre}
         />
 
@@ -444,7 +444,7 @@ const rutasFiltradas = rutas.filter((ruta) =>
             <div className="lugar-card h-100 fade-up">
 
               <img
-                src={`/src/assets/images/${ruta.imagen}`}
+                src={ruta.imagen}
                 alt={ruta.nombre}
                 className="lugar-img"
               />

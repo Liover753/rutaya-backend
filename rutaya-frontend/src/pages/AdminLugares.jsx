@@ -467,7 +467,7 @@ const lugaresFiltrados = lugares.filter((lugar) =>
 
                 {/* IMAGEN */}
                 <img
-                  src={`/src/assets/images/${lugar.imagen}`}
+                  src={lugar.imagen}
                   alt={lugar.nombre}
                   className="lugar-img"
                 />

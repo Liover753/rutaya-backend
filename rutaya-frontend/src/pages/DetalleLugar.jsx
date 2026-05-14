@@ -255,7 +255,7 @@ function DetalleLugar() {
           <div className="img-wrapper">
 
             <img
-              src={`/src/assets/images/${lugar.imagen}`}
+              src={lugar.imagen}
               alt={lugar.nombre}
               className="detalle-img mb-4"
             />
@@ -427,10 +427,8 @@ function DetalleLugar() {
 
                   {/* IMAGEN */}
                   <img
-                    src={`/src/assets/images/${item.imagen}`}
-
+                    src={item.imagen}
                     className="lugar-img"
-
                     alt={item.nombre}
                   />
 

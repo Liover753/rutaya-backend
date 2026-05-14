@@ -46,7 +46,7 @@ function DetalleRuta() {
 
   useEffect(() => {
 
-    fetch("http://localhost:8080/rutas")
+    fetch("https://rutaya-backend-production.up.railway.app/rutas")
 
       .then((res) => res.json())
 
@@ -281,7 +281,7 @@ function DetalleRuta() {
                 <div className="timeline-content">
 
                   <img
-                    src={`/src/assets/images/${detalle.lugar?.imagen}`}
+                    src={detalle.lugar?.imagen}
 
                     alt={detalle.lugar?.nombre}
 
